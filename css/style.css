@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.currency-img {
+    width: 30px;
+}
+
+p {
+    margin: 0;
+}
+
+.upper {
+    font-weight: 600;
+}
+
+.cash-in {
+    color: green;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.back-btn {
+    float: left;
+}
