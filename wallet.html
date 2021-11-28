@@ -66,12 +66,16 @@
         crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
+            var get_param = window.location.search;
+            let url_param = new URLSearchParams(get_param);
+
+
             $.ajax({
                 url: 'https://shakepay.github.io/programming-exercise/web/transaction_history.json',
             }).done(function (response) {
-                let user_selected = "CAD";
+                let user_selected = url_param.get('a').toUpperCase();
                 let user_transactions = response.filter((x) => {
-                    return x.currency == "CAD"
+                    return x.currency == user_selected;
                 })
                 let transaction = "";
                 for (let i = 0; i < user_transactions.length; i++) {
